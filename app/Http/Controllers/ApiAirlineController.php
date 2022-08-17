@@ -9,7 +9,7 @@ use App\Http\Resources\AirlineCollection;
 class ApiAirlineController extends Controller
 {
     public function index(){
-
+      
         $airlines = airline::select('airline_code','airline_name','airline_active')->get();
         return  AirlineResource::collection($airlines);
     

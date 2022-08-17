@@ -33,6 +33,7 @@ SET time_zone = "+00:00";
 -- Dumping data for table `groups`
 --
 
+
 INSERT INTO `groups` (`group_id`, `group_name`) VALUES
 (1, 'None'),
 (2, 'Latin / South America / Caribbean / Mexico'),
@@ -145,7 +146,6 @@ INSERT INTO `groups` (`group_id`, `group_name`) VALUES
 (134, 'Testing'),
 (133, 'WB - JAPAN -USA'),
 (132, 'USA- EuropeÂ  .Middle East. Africa. India .Asia');
-
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
