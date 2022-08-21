@@ -77,9 +77,7 @@
       </div>
     </nav>
   </div>
-          </header>
-          <nav>
-    
+          </header>    
         @yield('content')
           <!-- Page Footer-->
           <footer class="page-footer">
@@ -130,7 +128,7 @@
             </form>
           </div>
           </div>
-          </div>
+        </div>
           <hr>
           </div>
           <div class="shell shell-wide page-footer-min small">

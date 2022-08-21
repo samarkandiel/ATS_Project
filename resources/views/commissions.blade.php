@@ -15,7 +15,6 @@ ATS Commissions
           <div id="contract">
 @foreach ($airlines as $airline)
 <div class="air_container">
-  
   <div class="air_logo">
     <img src="{{url('css/multi-select.css') }}">
   </div>
@@ -55,11 +54,11 @@ ATS Commissions
           </div>
             <div class="air_container">
             <div class="air_logo">
-              <img src="http://pics.avs.io/80/40/AM,AM,AM,AT,AT,AT,CI,CI,CI.png"/>
+              <img src="http://pics.avs.io/80/40/AM,AM,AM,AT,AT,AT,CI,CI,CI.png">
             </div>
             <div class="air_code">
               <a href="select.php?airline=AM,AM,AM,AT,AT,AT,CI,CI,CI">
-                AM,AM,AM,AT,AT,AT,CI,CI,CI      </a>
+                AM,AM,AM,AT,AT,AT,CI,CI,CI  </a>
             </div>
             <div class="air_name">
                   </div>

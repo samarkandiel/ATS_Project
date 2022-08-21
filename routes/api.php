@@ -10,7 +10,7 @@ Route::middleware(['api-auth'])->group(function () {
     Route::get('/commissions/addcontract',[ApiContractController::class,'create']);
     Route::get('/commissions/{airline}',[ApiAirlineController::class,'show']);
     Route::get('/commissions/{airline}/show',[ApiContractController::class,'index']);
-    Route::get('/contractdetails/{name}',[ApiContractController::class,'show']);
+    Route::get('/contractdetails/{contract}',[ApiContractController::class,'show']);
 });
 Route::post('/commissions',[ApiContractController::class,'store']);
 Route::post('/register',[ApiAuthController::class,'register']);

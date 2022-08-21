@@ -8,23 +8,21 @@ use Illuminate\Http\Request;
 
 class ContractController extends Controller
 {   
-    public function index($airline_code){
-   
-        $contracts = contract::select('airline_code','name','group_id')
-        ->where('airline_code','=',$airline_code)->get();
-       // dd($contracts);
-      return view('show',['contracts' => $contracts]);
-    }
     public function show($name){
       $contracts = contract::get()->where('name','=',$name);
-    //dd($contracts);
      return view('contractdetails',['contracts'=>$contracts]);
      }
     public function create(){
       return view('addcontract');
      }
      public function store(Request $request){
-        //dd($request->com_code);
+      $request->validate([
+        'terms_no'=>'required|string|max:25',
+        'terms_name'=>'required|string',
+        'terms_start'=>'required|date|after:tomorrow',
+        'terms_end'=>'required|date|after:terms_start',
+        'terms_details'=>'required|text'
+      ]);
         contract::create([
          'order' => $request->terms_no,
          'name' => $request->terms_name,
@@ -36,7 +34,7 @@ class ContractController extends Controller
         
      ]);
        //dd($request->all());
-    return view('show');
+    return view('addcontract');
    
      }
   

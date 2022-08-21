@@ -14,7 +14,7 @@ class contract extends Model
     ];
     public function group()
     {
-        return $this->hasOne(group::class,'foreign_key');
+        return $this->belongsTo(group::class,'group_id');
     }
     public function airlines(){
         return $this->hasMany(airline::class,'foreign_key');

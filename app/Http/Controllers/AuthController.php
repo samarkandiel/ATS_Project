@@ -21,7 +21,6 @@ class AuthController extends Controller
         $data['password']= bcrypt($data['password']);
         $user = User::create($data);
         Auth ::login($user); //after register make login
-       // return view('auth.register');
        return redirect(url('/welcome'));
     }
     public function loginForm(){

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\contract;
 use Illuminate\Http\Request;
 use App\Http\Resources\ContractResource;
@@ -13,13 +12,11 @@ class ApiContractController extends Controller
    
         $contracts = contract::select('airline_code','name','group_id')
         ->where('airline_code','=',$airline_code)->get();
-        
         return ContractResource::collection($contracts);
-    
     }
-     public function show($name){
-        $contract = contract::get()->where('name','=',$name);
-       return ContractDetailsResource::collection($contract);
+     public function show($id){
+       $contract = contract::findOrFail($id);
+       return new ContractDetailsResource($contract);
        }
        public function store(Request $request){
         contract::create([

@@ -22,11 +22,12 @@
    <title>Create Contract</title>
 </head>
 <body>
-  {{-- @if ($errors->any())
+  @if ($errors->any())
   @foreach ($errors->all() as $error )
       <p>{{ $error }}</p>
   @endforeach  
-  @endif --}}
+  @endif
+
   <form action="{{ url('/commissions') }}" method="post" enctype="multipart/form-data">  
       @csrf
 <div class="wrapper">
@@ -196,408 +197,206 @@ WAW</option>
                         <label>Airline</label>
                       <input type="text" name="search" value="" id="id_search" placeholder="Search Airline" style="text-transform:uppercase;"  />
                         <select name="com_code[]" multiple="multiple" id="com_code" class="com_code" >
-                                                       <option value="9W">
-                                9W | Jet Airways                           </option>
-                                                       <option value="9W">
-                                9W | Jet Airways                           </option>
-                                                       <option value="9W">
-                                9W | Jet Airways                           </option>
-                                                       <option value="AA">
-                                AA | American Airlines                           </option>
-                                                       <option value="AA">
-                                AA | American Airlines                           </option>
+                         <option value="9W">9W | Jet Airways  </option>
                                                        <option value="AA">
                                 AA | American Airlines                           </option>
                                                        <option value="AC">
                                 AC | Air Canada                           </option>
-                                                       <option value="AC">
-                                AC | Air Canada                           </option>
-                                                       <option value="AC">
-                                AC | Air Canada                           </option>
                                                        <option value="AF">
                                 AF | Air France                           </option>
-                                                       <option value="AF">
-                                AF | Air France                           </option>
-                                                       <option value="AF">
-                                AF | Air France                           </option>
+                                                      
                                                        <option value="AI">
                                 AI | Nacil Air India                           </option>
-                                                       <option value="AI">
-                                AI | Nacil Air India                           </option>
-                                                       <option value="AI">
-                                AI | Nacil Air India                           </option>
+                                                       
                                                        <option value="AM">
                                 AM | Aeromexico                           </option>
-                                                       <option value="AM">
-                                AM | Aeromexico                           </option>
-                                                       <option value="AM">
-                                AM | Aeromexico                           </option>
+                                                      
                                                        <option value="AT">
                                 AT | Royal Air Maroc                           </option>
-                                                       <option value="AT">
-                                AT | Royal Air Maroc                           </option>
-                                                       <option value="AT">
-                                AT | Royal Air Maroc                           </option>
+                                                       
                                                        <option value="AV">
                                 AV | Avianca                           </option>
-                                                       <option value="AV">
-                                AV | Avianca                           </option>
+                                                       
                                                        <option value="AY">
                                 AY | Finnair                           </option>
-                                                       <option value="AY">
-                                AY | Finnair                           </option>
-                                                       <option value="AY">
-                                AY | Finnair                           </option>
+                                                       
                                                        <option value="AZ">
                                 AZ | Alitalia                           </option>
-                                                       <option value="AZ">
-                                AZ | Alitalia                           </option>
-                                                       <option value="AZ">
-                                AZ | Alitalia                           </option>
+                                                       
                                                        <option value="BA">
                                 BA | British Airways                           </option>
-                                                       <option value="BA">
-                                BA | British Airways                           </option>
-                                                       <option value="BA">
-                                BA | British Airways                           </option>
+                                                       
                                                        <option value="BR">
                                 BR | Eva Air                           </option>
-                                                       <option value="BR">
-                                BR | Eva Air                           </option>
-                                                       <option value="BR">
-                                BR | Eva Air                           </option>
+                                                       
                                                        <option value="CI">
                                 CI | China Airlines                           </option>
-                                                       <option value="CI">
-                                CI | China Airlines                           </option>
-                                                       <option value="CI">
-                                CI | China Airlines                           </option>
+                                                       
                                                        <option value="CX">
                                 CX | Cathay Pacific                           </option>
-                                                       <option value="CX">
-                                CX | Cathay Pacific                           </option>
-                                                       <option value="CX">
-                                CX | Cathay Pacific                           </option>
+                                                       
                                                        <option value="CZ">
                                 CZ | China Southern Airlines                           </option>
-                                                       <option value="CZ">
-                                CZ | China Southern Airlines                           </option>
-                                                       <option value="CZ">
-                                CZ | China Southern Airlines                           </option>
+                                                      
                                                        <option value="DE">
                                 DE | Condor                           </option>
-                                                       <option value="DE">
-                                DE | Condor                           </option>
-                                                       <option value="DE">
-                                DE | Condor                           </option>
+                                                       
                                                        <option value="DL">
                                 DL | Delta Air Lines                           </option>
-                                                       <option value="DL">
-                                DL | Delta Air Lines                           </option>
-                                                       <option value="DL">
-                                DL | Delta Air Lines                           </option>
+                                                      
                                                        <option value="DY">
                                 DY | Norwegian Air                           </option>
-                                                       <option value="DY">
-                                DY | Norwegian Air                           </option>
-                                                       <option value="DY">
-                                DY | Norwegian Air                           </option>
+                                                       
                                                        <option value="EI">
                                 EI | Aer Lingus                           </option>
-                                                       <option value="EI">
-                                EI | Aer Lingus                           </option>
-                                                       <option value="EI">
-                                EI | Aer Lingus                           </option>
+                                                       
                                                        <option value="EK">
                                 EK | Emirates                           </option>
-                                                       <option value="EK">
-                                EK | Emirates                           </option>
-                                                       <option value="EK">
-                                EK | Emirates                           </option>
+                                                       
                                                        <option value="ET">
                                 ET | Ethiopian Airlines                           </option>
-                                                       <option value="ET">
-                                ET | Ethiopian Airlines                           </option>
-                                                       <option value="ET">
-                                ET | Ethiopian Airlines                           </option>
+                                                       
                                                        <option value="EY">
                                 EY | Etihad Airways                           </option>
-                                                       <option value="EY">
-                                EY | Etihad Airways                           </option>
-                                                       <option value="EY">
-                                EY | Etihad Airways                           </option>
+                                                       
                                                        <option value="FI">
                                 FI | Icelandair                           </option>
-                                                       <option value="FI">
-                                FI | Icelandair                           </option>
-                                                       <option value="FI">
-                                FI | Icelandair                           </option>
+                                                       
                                                        <option value="FJ">
                                 FJ | Fiji Airways                           </option>
-                                                       <option value="FJ">
-                                FJ | Fiji Airways                           </option>
-                                                       <option value="FJ">
-                                FJ | Fiji Airways                           </option>
+                                                       
                                                        <option value="GF">
                                 GF | Gulf Air                           </option>
-                                                       <option value="GF">
-                                GF | Gulf Air                           </option>
-                                                       <option value="GF">
-                                GF | Gulf Air                           </option>
+                                                       
                                                        <option value="HU">
                                 HU | Hainan Airlines                           </option>
-                                                       <option value="HU">
-                                HU | Hainan Airlines                           </option>
+                                                       
                                                        <option value="IB">
                                 IB | Iberia                           </option>
-                                                       <option value="IB">
-                                IB | Iberia                           </option>
-                                                       <option value="IB">
-                                IB | Iberia                           </option>
+                                                       
                                                        <option value="IG">
                                 IG | Air Italy                           </option>
-                                                       <option value="IG">
-                                IG | Air Italy                           </option>
-                                                       <option value="IG">
-                                IG | Air Italy                           </option>
+                                                       
                                                        <option value="IZ">
                                 IZ | Arkia                           </option>
-                                                       <option value="IZ">
-                                IZ | Arkia                           </option>
-                                                       <option value="IZ">
-                                IZ | Arkia                           </option>
+                                                       
                                                        <option value="JL">
                                 JL | Japan Airlines                           </option>
-                                                       <option value="JL">
-                                JL | Japan Airlines                           </option>
-                                                       <option value="JL">
-                                JL | Japan Airlines                           </option>
+                                                       
                                                        <option value="JU">
                                 JU | Air Serbia                           </option>
-                                                       <option value="JU">
-                                JU | Air Serbia                           </option>
-                                                       <option value="JU">
-                                JU | Air Serbia                           </option>
+                                                       
                                                        <option value="KE">
                                 KE | Korean Air                           </option>
-                                                       <option value="KE">
-                                KE | Korean Air                           </option>
-                                                       <option value="KE">
-                                KE | Korean Air                           </option>
+                                                       
                                                        <option value="KL">
                                 KL | KLM                           </option>
-                                                       <option value="KL">
-                                KL | KLM                           </option>
-                                                       <option value="KL">
-                                KL | KLM                           </option>
+                                                       
                                                        <option value="KQ">
                                 KQ | Kenya Airways                           </option>
-                                                       <option value="KQ">
-                                KQ | Kenya Airways                           </option>
-                                                       <option value="KQ">
-                                KQ | Kenya Airways                           </option>
+                                                       
                                                        <option value="KU">
                                 KU | Kuwait Airways                           </option>
-                                                       <option value="KU">
-                                KU | Kuwait Airways                           </option>
-                                                       <option value="KU">
-                                KU | Kuwait Airways                           </option>
+                                                       
                                                        <option value="LH">
                                 LH | Lufthansa                           </option>
-                                                       <option value="LH">
-                                LH | Lufthansa                           </option>
-                                                       <option value="LH">
-                                LH | Lufthansa                           </option>
+                                                       
                                                        <option value="LO">
                                 LO | LOT Polish Airlines                           </option>
-                                                       <option value="LO">
-                                LO | LOT Polish Airlines                           </option>
-                                                       <option value="LO">
-                                LO | LOT Polish Airlines                           </option>
+                                                       
                                                        <option value="LQ">
                                 LQ | Lanmei airlines                           </option>
-                                                       <option value="LQ">
-                                LQ | Lanmei airlines                           </option>
-                                                       <option value="LQ">
-                                LQ | Lanmei airlines                           </option>
+                                                      
                                                        <option value="LX">
                                 LX | Swiss                           </option>
-                                                       <option value="LX">
-                                LX | Swiss                           </option>
-                                                       <option value="LX">
-                                LX | Swiss                           </option>
+                                                       
                                                        <option value="LY">
                                 LY | El Al                           </option>
-                                                       <option value="LY">
-                                LY | El Al                           </option>
-                                                       <option value="LY">
-                                LY | El Al                           </option>
+                                                       
                                                        <option value="ME">
                                 ME | Middle East Airlines                           </option>
-                                                       <option value="ME">
-                                ME | Middle East Airlines                           </option>
-                                                       <option value="ME">
-                                ME | Middle East Airlines                           </option>
+                                                       
                                                        <option value="MS">
                                 MS | Egyptair                           </option>
-                                                       <option value="MS">
-                                MS | Egyptair                           </option>
-                                                       <option value="MS">
-                                MS | Egyptair                           </option>
+                                                       
                                                        <option value="MU">
                                 MU | China Eastern Airlines                           </option>
-                                                       <option value="MU">
-                                MU | China Eastern Airlines                           </option>
-                                                       <option value="MU">
-                                MU | China Eastern Airlines                           </option>
+                                                       
                                                        <option value="NH">
                                 NH | All Nippon Airways                           </option>
-                                                       <option value="NH">
-                                NH | All Nippon Airways                           </option>
-                                                       <option value="NH">
-                                NH | All Nippon Airways                           </option>
+                                                       
                                                        <option value="NX">
                                 NX | Air Macau                           </option>
-                                                       <option value="NX">
-                                NX | Air Macau                           </option>
-                                                       <option value="NX">
-                                NX | Air Macau                           </option>
+                                                       
                                                        <option value="OS">
                                 OS | Austrian                           </option>
-                                                       <option value="OS">
-                                OS | Austrian                           </option>
-                                                       <option value="OS">
-                                OS | Austrian                           </option>
+                                                       
                                                        <option value="OZ">
                                 OZ | Asiana Airlines                           </option>
-                                                       <option value="OZ">
-                                OZ | Asiana Airlines                           </option>
-                                                       <option value="OZ">
-                                OZ | Asiana Airlines                           </option>
+                                              
                                                        <option value="PK">
                                 PK | Pakistan International Airlines                           </option>
-                                                       <option value="PK">
-                                PK | Pakistan International Airlines                           </option>
+                                                       
                                                        <option value="PR">
                                 PR | Philippine Airlines                           </option>
-                                                       <option value="PR">
-                                PR | Philippine Airlines                           </option>
-                                                       <option value="PR">
-                                PR | Philippine Airlines                           </option>
+                                                       
                                                        <option value="PS">
                                 PS | Ukraine Intl Airlines                           </option>
-                                                       <option value="PS">
-                                PS | Ukraine Intl Airlines                           </option>
-                                                       <option value="PS">
-                                PS | Ukraine Intl Airlines                           </option>
+                                                       
                                                        <option value="QF">
                                 QF | Qantas Airways                           </option>
-                                                       <option value="QF">
-                                QF | Qantas Airways                           </option>
-                                                       <option value="QF">
-                                QF | Qantas Airways                           </option>
+                                                       
                                                        <option value="QR">
                                 QR | Qatar Airways                           </option>
-                                                       <option value="QR">
-                                QR | Qatar Airways                           </option>
-                                                       <option value="QR">
-                                QR | Qatar Airways                           </option>
+                                                       
                                                        <option value="RJ">
                                 RJ | Royal Jordanian                           </option>
-                                                       <option value="RJ">
-                                RJ | Royal Jordanian                           </option>
-                                                       <option value="RJ">
-                                RJ | Royal Jordanian                           </option>
+                                                       
                                                        <option value="SA">
                                 SA | South African Airways                           </option>
-                                                       <option value="SA">
-                                SA | South African Airways                           </option>
-                                                       <option value="SA">
-                                SA | South African Airways                           </option>
+                                                       
                                                        <option value="SE">
                                 SE | XL Airways France                           </option>
-                                                       <option value="SE">
-                                SE | XL Airways France                           </option>
-                                                       <option value="SE">
-                                SE | XL Airways France                           </option>
+                                                       
                                                        <option value="SK">
                                 SK | Scandinavian Airlines                           </option>
-                                                       <option value="SK">
-                                SK | Scandinavian Airlines                           </option>
-                                                       <option value="SK">
-                                SK | Scandinavian Airlines                           </option>
+                                                       
                                                        <option value="SN">
                                 SN | Brussels Airlines                           </option>
-                                                       <option value="SN">
-                                SN | Brussels Airlines                           </option>
-                                                       <option value="SN">
-                                SN | Brussels Airlines                           </option>
+                                                       
                                                        <option value="SQ">
                                 SQ | Singapore Airlines                           </option>
-                                                       <option value="SQ">
-                                SQ | Singapore Airlines                           </option>
-                                                       <option value="SQ">
-                                SQ | Singapore Airlines                           </option>
+                                                       
                                                        <option value="SV">
                                 SV | Saudi Arabian Airlines                           </option>
-                                                       <option value="SV">
-                                SV | Saudi Arabian Airlines                           </option>
-                                                       <option value="SV">
-                                SV | Saudi Arabian Airlines                           </option>
+                                                       
                                                        <option value="TB">
                                 TB | TUIfly                           </option>
-                                                       <option value="TB">
-                                TB | TUIfly                           </option>
-                                                       <option value="TB">
-                                TB | TUIfly                           </option>
+                                                       
                                                        <option value="TK">
                                 TK | Turkish Airlines                           </option>
-                                                       <option value="TK">
-                                TK | Turkish Airlines                           </option>
-                                                       <option value="TK">
-                                TK | Turkish Airlines                           </option>
+                                                       
                                                        <option value="TN">
                                 TN | Air Tahiti Nui                           </option>
-                                                       <option value="TN">
-                                TN | Air Tahiti Nui                           </option>
-                                                       <option value="TN">
-                                TN | Air Tahiti Nui                           </option>
+                                                       
                                                        <option value="TP">
                                 TP | TAP Portugal                           </option>
-                                                       <option value="TP">
-                                TP | TAP Portugal                           </option>
-                                                       <option value="TP">
-                                TP | TAP Portugal                           </option>
+                                                       
                                                        <option value="UA">
                                 UA | United Airlines                           </option>
-                                                       <option value="UA">
-                                UA | United Airlines                           </option>
-                                                       <option value="UA">
-                                UA | United Airlines                           </option>
+                                                       
                                                        <option value="VA">
                                 VA | V Australia                           </option>
-                                                       <option value="VA">
-                                VA | V Australia                           </option>
-                                                       <option value="VA">
-                                VA | V Australia                           </option>
+                                                       
                                                        <option value="VR">
                                 VR | Tacv Cabo Verde Airlines                           </option>
-                                                       <option value="VR">
-                                VR | Tacv Cabo Verde Airlines                           </option>
+                                                       
                                                        <option value="VS">
                                 VS | Virgin Atlantic                           </option>
-                                                       <option value="VS">
-                                VS | Virgin Atlantic                           </option>
-                                                       <option value="VS">
-                                VS | Virgin Atlantic                           </option>
+                                                       
                                                        <option value="WY">
                                 WY | Oman Air                           </option>
-                                                       <option value="WY">
-                                WY | Oman Air                           </option>
-                                                       <option value="YM">
-                                YM | Montenegro Airlines                           </option>
-                                                       <option value="YM">
-                                YM | Montenegro Airlines                           </option>
+                                                       
                                                        <option value="YM">
                                 YM | Montenegro Airlines                           </option>
                                                    </select>

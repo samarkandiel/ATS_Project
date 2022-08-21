@@ -92,8 +92,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'samarkandiel99@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'ats'),
     ],
 
     /*
@@ -111,7 +111,9 @@ return [
         'theme' => 'default',
 
         'paths' => [
-            resource_path('views/vendor/mail'),
+            // resource_path('views/vendor/mail'),
+            resource_path('views/layout'),
+
         ],
     ],
 

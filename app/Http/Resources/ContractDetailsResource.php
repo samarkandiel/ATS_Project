@@ -20,6 +20,7 @@ class ContractDetailsResource extends JsonResource
             'order'=>$this->order,
             'ticketing_start'=>$this->ticketing_start,
             'ticketing_end'=>$this->ticketing_end,
+            'terms_conditiaons'=>$this->terms_conditiaons
         ];
     }
 }

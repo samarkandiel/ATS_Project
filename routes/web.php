@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AirlineController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContractController;
 
 
@@ -42,7 +43,6 @@ Route::get('/platform', function () {
 Route::get('/commissions',[AirlineController::class,'index']);
 Route::get('/commissions/addcontract',[ContractController::class,'create']);
 Route::get('/commissions/{airline}',[AirlineController::class,'show']);
-Route::get('/commissions/{airline}/show',[ContractController::class,'index']);
 Route::post('/commissions',[ContractController::class,'store']);
 Route::get('/contractdetails/{name}',[ContractController::class,'show']);
 Route::get('/login',[AuthController::class,'loginForm']);
